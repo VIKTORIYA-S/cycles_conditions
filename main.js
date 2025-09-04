@@ -1,17 +1,5 @@
 'use strict'
 
-// let age = prompt('Скільки вам років?');
-
-// if (age <= 11) {
-//     alert('Ви дитина!');
-// } else if (age >=12 && age <= 17) {
-//     alert('Ви підліток!');
-// } else if (age >= 18 && age <= 59) {
-//     alert('Ви дорослий!');
-// } else {
-//     alert('Ви пенсіонер!');
-// }
-
 
 function checkAge() {
 let age = document.getElementById('number').value;
@@ -94,7 +82,7 @@ function sum(start, end) {
     console.log(sum);
     return sum;
 }
-alert(sum(a, b));
+alert(`Сума чисел від ${a} до ${b} дорівнює ${sum(a, b)}`);
 
 
 
@@ -109,35 +97,9 @@ function gcd(a, b) {
 
 let num1 = +prompt('Введіть перше число');
 let num2 = +prompt('Введіть друге число');
-alert(`НОД чисел ${num1} і ${num2} дорівнює ${gcd(num1, num2)}`);
+alert(`Найбільший Дільник чисел ${num1} і ${num2} дорівнює ${gcd(num1, num2)}`);
 
 
-// let number = prompt('Введіть число');
-// let sum_1 = 0;
-// for (let i = 1; i <= number; i++) {
-//     if (number % 2 === 0) {
-//     sum_1 =  2;
-//     } else if (number % 3 === 0) {
-//         sum_1 = sum_1 + 3;
-//     } else if (number % 4 === 0) {
-//         sum_1 = sum_1 + 4;
-//     } else if (number % 5 === 0) {
-//         sum_1 = sum_1 + 5;
-//     } else if (number % 6 === 0) {
-//         sum_1 = sum_1 + 6;
-//     } else if (number % 7 === 0) {
-//         sum_1 = sum_1 + 7;
-//     } else if (number % 8 === 0) {
-//         sum_1 = sum_1 + 8;
-//     } else if (number % 9 === 0) {
-//         sum_1 = sum_1 + 9;
-//     } else if (number % 10 === 0) {
-//         sum_1 = sum_1 + 10;
-//     }
-//     break;
-// }
-// alert(sum_1);
-//     console.log(sum_1);
 
 let number = +prompt('Введіть число');
 let result = '';
@@ -149,6 +111,24 @@ for (let i = 1; i <= number; i++) {
 }
 
 alert(`Дільники числа ${number}: ${result.slice(0, -2)}`);
+
+
+
+let palindromeNumber = prompt("Введіть п'ятирозрядне число");
+
+if (palindromeNumber.length !== 5 || isNaN(palindromeNumber)) {
+    alert("Будь ласка, введіть саме п'ятирозрядне число");
+} else {
+    let reversed = palindromeNumber.split('').reverse().join('');
+
+    if (palindromeNumber === reversed) {
+        alert("Це паліндром");
+    } else {
+        alert("Це не паліндром");
+    }
+}
+
+
 
 
 
